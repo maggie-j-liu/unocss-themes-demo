@@ -18,8 +18,51 @@ const themes = {
 export default defineConfig({
   plugins: [
     unocss({
+      theme: {
+        fontFamily: {
+          sans: '"Barlow", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        },
+      },
       presets: [presetAttributify(), presetUno()],
       variants: unocssThemes({ themes }),
+      rules: [
+        [
+          "bg-clip-text",
+          {
+            "background-clip": "text",
+            "-webkit-background-clip": "text",
+          },
+        ],
+        [
+          /^(from|to)-(.*?)-(\d+)$/,
+          (match, theme) => {
+            const [, dir, color, size] = match;
+            return {
+              [`--un-gradient-${dir}`]: theme.colors[color][size],
+              "--un-gradient-stops":
+                "var(--un-gradient-from, transparent), var(--un-gradient-to, transparent)",
+            };
+          },
+        ],
+        [
+          /^via-(.*?)-(\d+)$/,
+          (match, theme) => {
+            const [, color, size] = match;
+            return {
+              [`--un-gradient-via`]: theme.colors[color][size],
+              "--un-gradient-stops":
+                "var(--un-gradient-from, transparent), var(--un-gradient-via, transparent), var(--un-gradient-to, transparent)",
+            };
+          },
+        ],
+        [
+          "bg-gradient-to-r",
+          {
+            "background-image":
+              "linear-gradient(to right, var(--un-gradient-stops))",
+          },
+        ],
+      ],
     }),
     react(),
   ],

@@ -8,11 +8,12 @@ export const colorModes = [
   "blue",
   "indigo",
   "purple",
+  "default",
 ];
 
-const ColorModeContext = createContext();
+const ColorModeContext = createContext("default");
 export const ColorModeProvider = ({ children }) => {
-  const [colorMode, rawSetColorMode] = useState();
+  const [colorMode, rawSetColorMode] = useState("default");
   const storeUserPref = (pref) => {
     localStorage.setItem("theme", pref);
   };
@@ -24,6 +25,8 @@ export const ColorModeProvider = ({ children }) => {
     const userPref = getUserPref();
     if (userPref && colorModes.includes(userPref)) {
       rawSetColorMode(userPref);
+    } else {
+      setColorMode("default");
     }
   }, []);
 
