@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-
 function App() {
   return (
     <main className="theme-purple">
-      <div bg="blue:blue-400 purple:purple-400">Hi!</div>
+      <div blue="bg-blue-500" purple="bg-purple-500">Hi!</div>
     </main>
   )
 }
