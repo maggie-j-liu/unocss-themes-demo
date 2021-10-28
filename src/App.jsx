@@ -80,7 +80,7 @@ function App() {
                 className={({ checked }) =>
                   `${
                     checked ? "ring-2 ring-offset-1" : ""
-                  } rounded-full w-8 h-8 focus:outline-none focus:ring-blue-500 ${
+                  } rounded-full w-8 h-8 focus:outline-none focus:ring-blue-500 duration-0 ${
                     buttonColors[i]
                   }`
                 }
