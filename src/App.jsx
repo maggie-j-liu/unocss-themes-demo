@@ -13,9 +13,24 @@ const buttonColors = [
 function App() {
   const { colorMode, setColorMode } = useColorMode();
   return (
-    <main className="h-screen flex font-sans text-center">
+    <main className="h-screen flex font-sans text-center all:duration-300 px-8">
       <div className="m-auto font-sans">
-        <h1 className="text-5xl font-thin mb-1">unocss themes</h1>
+        <div className="flex flex-wrap gap-4 items-end justify-center mb-1">
+          <h1 className="text-5xl font-thin">unocss themes</h1>
+          <a
+            href="https://github.com/maggie-j-liu/unocss-themes"
+            target="_blank"
+            rel="noreferrer"
+            className="i-carbon-logo-github w-7 h-7 mb-1 text-gray-500 hover:text-gray-800 focus:text-gray-800"
+            red="text-red-400 hover:text-red-600 focus:text-red-600"
+            orange="text-orange-400 hover:text-orange-600 focus:text-orange-600"
+            yellow="text-yellow-400 hover:text-yellow-600 focus:text-yellow-600"
+            green="text-green-400 hover:text-green-600 focus:text-green-600"
+            blue="text-blue-400 hover:text-blue-600 focus:text-blue-600"
+            indigo="text-indigo-400 hover:text-indigo-600 focus:text-indigo-600"
+            purple="text-purple-400 hover:text-purple-600 focus:text-purple-600"
+          />
+        </div>
         <p className="text-lg text-gray-500 font-light">
           an{" "}
           <a
@@ -56,7 +71,7 @@ function App() {
               console.log("change", c);
               setColorMode(c);
             }}
-            className="flex gap-4 justify-center mt-3"
+            className="flex flex-wrap gap-4 justify-center mt-3"
           >
             {colorModes.map((color, i) => (
               <RadioGroup.Option
