@@ -7,6 +7,31 @@
     <title>Vite App</title>
   </head>
   <body>
+    <script>
+      const getInitialColorMode = () => {
+        const userPref = window.localStorage.getItem("theme");
+        const hasUserPref = typeof userPref === "string";
+        return hasUserPref ? userPref : null;
+      };
+      const colorModes = [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "purple",
+      ];
+      const colorMode = getInitialColorMode();
+      if (colorMode !== null) {
+        colorModes.forEach((color) => {
+          if (document.documentElement.classList.contains(color)) {
+            document.documentElement.classList.remove(color);
+          }
+        });
+        document.documentElement.classList.add(colorMode);
+      }
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
