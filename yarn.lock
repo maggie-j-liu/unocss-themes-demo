@@ -916,9 +916,10 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.yarnpkg.com/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz#784fd3d679722bc103b1b4b8030bcddb5db2a699"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-"unocss-themes@github:maggie-j-liu/unocss-themes":
+unocss-themes@^1.0.0:
   version "1.0.0"
-  resolved "https://codeload.github.com/maggie-j-liu/unocss-themes/tar.gz/cf8850168b539e536a45c886143d4d240e94b966"
+  resolved "https://registry.yarnpkg.com/unocss-themes/-/unocss-themes-1.0.0.tgz#663ea8a441019e056cf9f4ad6e18e59311849f40"
+  integrity sha512-CPClYyeLeGZulTBH5wvpUawaVWm0haYnmMLiiTmei6HI/wm10GHpXxpg3kN5UT3xZUP1QJYAO9EsgPruyaD+SA==
 
 unocss@^0.2.0:
   version "0.2.0"
