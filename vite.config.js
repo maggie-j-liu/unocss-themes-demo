@@ -36,8 +36,11 @@ export default defineConfig({
         ],
         [
           /^(from|to)-(.*?)-(\d+)$/,
-          (match, theme) => {
+          (match, { theme }) => {
             const [, dir, color, size] = match;
+            if (!theme?.colors?.[color]?.[size]) {
+              return;
+            }
             return {
               [`--un-gradient-${dir}`]: theme.colors[color][size],
               "--un-gradient-stops":
@@ -47,8 +50,11 @@ export default defineConfig({
         ],
         [
           /^via-(.*?)-(\d+)$/,
-          (match, theme) => {
+          (match, { theme }) => {
             const [, color, size] = match;
+            if (!theme?.colors?.[color]?.[size]) {
+              return;
+            }
             return {
               [`--un-gradient-via`]: theme.colors[color][size],
               "--un-gradient-stops":

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import "@unocss/reset/tailwind.css";
 import { ColorModeProvider } from "./useColorMode";
+import "uno.css";
 
 ReactDOM.render(
   <React.StrictMode>
