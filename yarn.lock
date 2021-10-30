@@ -916,10 +916,10 @@ ts-interface-checker@^0.1.9:
   resolved "https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
 
-unocss-themes@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unocss-themes/-/unocss-themes-1.1.0.tgz#de421ce8e7204219bdd76261db13c5b2d4176a47"
-  integrity sha512-WRkDXzZUOTZ9c086V/ke1BKA96RzPazJP1LgEI8+0bgWhjl8/Plp0tUYP8mksitwkRWS3KE1NahnZI6DxMzCUA==
+unocss-themes@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/unocss-themes/-/unocss-themes-2.0.0.tgz#0e3330367e69d7403b96efce774766e3bd8df37a"
+  integrity sha512-yIHLJywbbLFWatFCG3AhId94+JUpLKcr9rvKKAEgHDxRwnKb9WyakNFlcBMWyx5mMkBHcbU06/Q6YClmqGfmAg==
 
 unocss@^0.4.0:
   version "0.4.0"

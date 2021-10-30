@@ -25,7 +25,7 @@ export default defineConfig({
         },
       },
       presets: [presetAttributify(), presetUno(), presetIcons()],
-      variants: unocssThemes({ themes }),
+      variants: [unocssThemes({ themes })],
       rules: [
         [
           "bg-clip-text",
